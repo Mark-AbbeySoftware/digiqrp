@@ -1,0 +1,21 @@
+{
+    "Core": true,
+    "Dashboard": true,
+    "Media": true,
+    "Menu": true,
+    "Page": true,
+    "Setting": true,
+    "Tag": true,
+    "Translation": true,
+    "User": true,
+    "Workshop": true,
+    "Logbook": true,
+    "Blog": true,
+    "Solar": true,
+    "Download": true,
+    "Chitchat": true,
+    "Forum": true,
+    "CallBook": true,
+    "Notification": true,
+    "Notes": true
+}

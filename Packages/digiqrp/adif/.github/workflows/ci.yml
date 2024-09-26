@@ -1,0 +1,40 @@
+name: CI Workflow
+
+on: [push, pull_request]
+
+jobs:
+    ci:
+        name: 'j4nr6n/adif (PHP ${{ matrix.php-versions }})'
+        runs-on: ubuntu-latest
+        strategy:
+            fail-fast: true
+            matrix:
+                php-versions: ['8.2', '8.3']
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+
+            - name: Setup PHP, extensions, and Composer
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: ${{ matrix.php-versions }}
+              env:
+                  update: true
+
+            - name: Check PHP Version
+              run: php -v
+
+            - name: Validate composer.json and composer.lock
+              run: composer validate
+
+            - name: Install Composer Dependencies
+              run: composer install --prefer-dist --no-progress
+
+            - name: Coding Standards Checks
+              run: ./vendor/bin/phpcs
+
+            - name: Psalm Static Analysis
+              run: ./vendor/bin/psalm
+
+            - name: PHPUnit
+              run: ./vendor/bin/phpunit

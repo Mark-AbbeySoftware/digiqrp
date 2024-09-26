@@ -1,0 +1,15 @@
+{
+    "name": "Notification",
+    "alias": "notification",
+    "version": "1.0.0",
+	"description": "System Notifications",
+    "keywords": [],
+    "priority": 1,
+    "providers": [
+        "Modules\\Notification\\Providers\\NotificationServiceProvider",
+        "Modules\\Notification\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
