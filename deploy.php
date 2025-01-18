@@ -7,7 +7,7 @@ require 'recipe/laravel.php';
 
 // Config
 set('application', 'DIGIRP CMS Web Application');                          // The Application Title
-set('repository', ' git@personalAccount.github.com:LaravelCrafter/digiqrp.git');   // SCM Target
+set('repository', 'git@abbeysoftware.github.com:Mark-AbbeySoftware/digiqrp.git');   // SCM Target
 set('keep_releases',
     2);                                                           // Number of releases to keep on hosts
 set('default_timeout', 1200);                                                      // default ssh timeout
