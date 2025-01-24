@@ -16,6 +16,9 @@ add('shared_files', ['.env']);                                                  
 add('shared_dirs', ['storage', 'vendor', 'bootstrap/cache']);              // Shared dirs between deploys
 add('writable_dirs', ['storage', 'vendor', 'bootstrap/cache']);            // Writable dirs by web server
 
+set('bin/php', function () {
+    return '/usr/bin/php7.4';
+});
 
 // Core Tasks
 
@@ -36,7 +39,7 @@ task('build', function () {
 // Hosts
 
 host('prod')
-    ->set('hostname', 'vcms.absdev.net')
+    ->set('hostname', 'digiqrp.com')
     ->set('remote_user', 'mag')
     ->set('identityFile', '~/.ssh/id_rsa')
     ->set('deploy_path', '/var/www/digiqrp/prod')
@@ -49,7 +52,7 @@ host('prod')
     ->set('ssh_type', 'native');
 
 host('stage')
-    ->set('hostname', 'vcms.absdev.net')
+    ->set('hostname', 'digiqrp.com')
     ->set('remote_user', 'mag')
     ->set('identityFile', '~/.ssh/id_rsa')
     ->set('deploy_path', '/var/www/digiqrp/stage')
@@ -62,7 +65,7 @@ host('stage')
     ->set('ssh_type', 'native');
 
 host('develop')
-    ->set('hostname', 'vcms.absdev.net')
+    ->set('hostname', 'digiqrp.com')
     ->set('remote_user', 'mag')
     ->set('identityFile', '~/.ssh/id_rsa')
     ->set('deploy_path', '/var/www/digiqrp/dev')
