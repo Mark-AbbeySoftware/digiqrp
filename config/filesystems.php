@@ -62,7 +62,7 @@ return [
 
     'data' => [
             'driver'      => 'local',
-            'root'        => '/data/Backups/digiqrp',
+            'root'        => 'app/../../../shared/backups',
             'permissions' => [
                 'file' => [
                     'public'  => 0777,
