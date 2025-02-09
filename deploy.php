@@ -16,8 +16,8 @@ set('keep_releases',
 set('default_timeout', 1200);                                                      // default ssh timeout
 
 add('shared_files', ['.env']);                                                             // shared files
-add('shared_dirs', ['storage', 'vendor', 'bootstrap/cache','public/storage']);              // Shared dirs between deploys
-add('writable_dirs', ['storage', 'vendor', 'bootstrap/cache','public/storage']);            // Writable dirs by web server
+add('shared_dirs', ['storage', 'vendor', 'bootstrap/cache','public/storage','backups']);              // Shared dirs between deploys
+add('writable_dirs', ['storage', 'vendor', 'bootstrap/cache','public/storage','backups']);            // Writable dirs by web server
 
 // Core Tasks
 
