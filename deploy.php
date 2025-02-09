@@ -4,6 +4,9 @@ namespace Deployer;
 
 require 'recipe/laravel.php';
 
+set('bin/php', function () {
+    return '/usr/bin/php7.4';
+});
 
 // Config
 set('application', 'DIGIRP CMS Web Application');                          // The Application Title
@@ -15,10 +18,6 @@ set('default_timeout', 1200);                                                   
 add('shared_files', ['.env']);                                                             // shared files
 add('shared_dirs', ['storage', 'vendor', 'bootstrap/cache','public/storage']);              // Shared dirs between deploys
 add('writable_dirs', ['storage', 'vendor', 'bootstrap/cache','public/storage']);            // Writable dirs by web server
-
-set('bin/php', function () {
-    return '/usr/bin/php7.4';
-});
 
 // Core Tasks
 
@@ -42,7 +41,7 @@ host('prod')
     ->set('hostname', 'digiqrp.com')
     ->set('remote_user', 'mag')
     ->set('identityFile', '~/.ssh/id_rsa')
-    ->set('deploy_path', '/var/www/digiqrp/prod')
+    ->set('deploy_path', '/var/www/Personal/digiqrp/prod')
     ->set('writable_use_sudo', false)
     ->set('use_relative_symlink', true)
     ->set('http_user', 'mag')
@@ -55,7 +54,7 @@ host('stage')
     ->set('hostname', 'digiqrp.com')
     ->set('remote_user', 'mag')
     ->set('identityFile', '~/.ssh/id_rsa')
-    ->set('deploy_path', '/var/www/digiqrp/stage')
+    ->set('deploy_path', '/var/www/Personal/digiqrp/stage')
     ->set('writable_use_sudo', false)
     ->set('use_relative_symlink', true)
     ->set('http_user', 'mag')
@@ -68,7 +67,7 @@ host('develop')
     ->set('hostname', 'digiqrp.com')
     ->set('remote_user', 'mag')
     ->set('identityFile', '~/.ssh/id_rsa')
-    ->set('deploy_path', '/var/www/digiqrp/dev')
+    ->set('deploy_path', '/var/www/Personal/digiqrp/dev')
     ->set('writable_use_sudo', false)
     ->set('use_relative_symlink', true)
     ->set('http_user', 'mag')
