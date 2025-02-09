@@ -8,7 +8,7 @@ class MacLogger extends Model
 {
     protected $connection = 'maclogger';
 
-    protected $table = 'qso_table_v007';
+    protected $table = 'MacLoggerDX.sql';
 
     protected $dates = [
         'created_at',

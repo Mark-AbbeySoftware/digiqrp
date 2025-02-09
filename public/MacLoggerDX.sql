@@ -1,0 +1,1 @@
+/Users/mgregory/Documents/MLDX_Logs/MacLoggerDX.sql

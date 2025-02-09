@@ -8,6 +8,7 @@ use Modules\Core\Events\BuildingSidebar;
 use Modules\Core\Events\LoadingBackendTranslations;
 use Modules\Core\Traits\CanPublishConfiguration;
 use Modules\Logbook\Console\CallChecker;
+use Modules\Logbook\Console\ExportToMacLogger;
 use Modules\Logbook\Console\ImportMacLogger;
 use Modules\Logbook\Console\UDPSender;
 use Modules\Logbook\Console\UDPServer;
@@ -109,7 +110,8 @@ class LogbookServiceProvider extends ServiceProvider
         $this->commands([
             UDPServer::class,
             CallChecker::class,
-            UDPSender::class
+            UDPSender::class,
+            ExportToMacLogger::class
         ]);
     }
 
