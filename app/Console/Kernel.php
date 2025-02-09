@@ -28,6 +28,7 @@ class Kernel extends ConsoleKernel
     {
         // Generate Site map everyday
         $schedule->command('sitemap:generate')->daily();
+        $schedule->command('backup:run')->daily()->at('01:30');
 
     }
 
